@@ -1,0 +1,44 @@
+<template>
+  <tab-bar>
+    <tab-bar-item path="/home" > <!--    ActiveColor="Skyblue"   不写就使用默认颜色--><!--    path  表示传入过来的是/home    ActiveColor  表示传过去的是Skyblue-->
+      <img slot="item-icon" src="../../../assets/img/tabbar/home.svg" alt="">
+      <img slot="item-icon-active" src="../../../assets/img/tabbar/home_active.svg" alt="">
+      <div slot="item-text">首页</div>
+    </tab-bar-item>
+    <tab-bar-item path="/item">
+      <img slot="item-icon" src="../../../assets/img/tabbar/item.svg" alt="">
+      <img slot="item-icon-active" src="../../../assets/img/tabbar/item_active.svg" alt="">
+      <div slot="item-text">分类</div>
+    </tab-bar-item>
+    <tab-bar-item path="/ches">
+      <img slot="item-icon" src="../../../assets/img/tabbar/ches.svg" alt="">
+      <img slot="item-icon-active" src="../../../assets/img/tabbar/ches_active.svg" alt="">
+      <div slot="item-text">购物车</div>
+    </tab-bar-item>
+    <tab-bar-item path="/me">
+      <img slot="item-icon" src="../../../assets/img/tabbar/me.svg" alt="">
+      <img slot="item-icon-active" src="../../../assets/img/tabbar/me_active.svg" alt="">
+      <div slot="item-text">我的</div>
+    </tab-bar-item>
+
+
+  </tab-bar>
+</template>
+
+<script>
+
+import TabBar from "../../common/tabbar/TabBar";
+import TabBarItem from "../../common/tabbar/TabBarItem";
+
+export default {
+  name: "MainTabBar",
+  components:{
+    TabBar,
+    TabBarItem,
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
