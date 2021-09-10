@@ -1,7 +1,7 @@
 <template>
 <!--  遍历数组  得到许多个item对象  把item的数据传入子组件渲染-->
   <div class="goods-list">
-    <good-list-item v-for="(item,index) in goods"  :goodsItem="item" :key="index"></good-list-item>
+    <good-list-item v-for="(item,index) in goods"  :goods-item="item" :key="index"></good-list-item>
   </div>
 </template>
 

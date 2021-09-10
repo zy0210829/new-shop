@@ -50,7 +50,7 @@ export default {
       this.handleDom();//一秒后调用这个函数，这个函数是生成小圆圈
       // 2.开启定时器
       this.startTimer();
-    }, 5000)
+    }, 500)
   },
   methods: {
     /**
@@ -111,7 +111,9 @@ export default {
     handleDom: function () {
       // 1.获取要操作的元素
       let swiperEl = document.querySelector('.swiper');//获取图片的div
+
       let slidesEls = swiperEl.getElementsByClassName('slide');//获取小圆点
+
       // 2.保存个数
       this.slideCount = slidesEls.length;//获取小圆点的长度
       // 3.如果大于1个, 那么在前后分别添加一个slide
@@ -182,6 +184,8 @@ export default {
     }
   }
 }
+
+
 </script>
 
 <style scoped>

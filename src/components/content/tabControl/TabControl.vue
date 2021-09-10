@@ -22,7 +22,6 @@ export default {
       }
     }
   },
-
   methods:{
     itemClick(index){
       this.currentIndex = index;
@@ -40,6 +39,7 @@ export default {
   font-size:15px;
   height: 40px;
   line-height: 40px;
+
 }
 .control-item{
   flex:1;

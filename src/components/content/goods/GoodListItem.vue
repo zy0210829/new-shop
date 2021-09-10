@@ -1,9 +1,9 @@
 <template>
-  <div class="goods-item">
-    <img :src="goodsItem.show.img" alt="">
+  <div class="goods-item" >
+    <img :src="showImg" alt="" @load="imgLoad" @click="itemClick"><!--@load  监听图片加载完成-->
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
-      <span class="price">{{goodsItem.price}}</span>
+      <span class="price">{{'¥'+goodsItem.price}}</span>
       <span class="collect">{{goodsItem.cfav}}</span>
     </div>
   </div>
@@ -19,7 +19,22 @@ export default {
         return {}
       }
     }
-  }
+  },
+  computed:{
+    showImg(){
+      //this.goodsItem.image  详情页推荐的图片
+      //this.goodsItem.show.img  home里面的'流行','新款','精选'的图片
+      return  this.goodsItem.image || this.goodsItem.show.img
+    }
+  },
+  methods:{
+    imgLoad(){//监听一张图片加载完成调用这个方法
+      this.$bus.$emit('itemImgLoad')//用事件总线方法   把事件发射出去
+    },
+    itemClick(){
+      this.$router.push('/detail/'+this.goodsItem.iid)
+    }
+  },
 }
 </script>
 
