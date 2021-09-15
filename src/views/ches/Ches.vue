@@ -26,6 +26,7 @@ export default {
     CartBottomBar
   },
   computed:{
+    //mapActions也可以将 store 中的 actions 映射到局部使用
     //1.mapGetter辅助函数仅仅是将 store 中的 getter 映射到局部计算属性
     // 第一种写法
     // ...mapGetters(['cartLength']),

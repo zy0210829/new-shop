@@ -4,7 +4,7 @@
       <a :href="item.link">
         <img :src="item.image" alt="">
       </a>
-      <div>{{item.title}}</div>
+      <div class="title">{{item.title}}</div>
     </div>
   </div>
 </template>
@@ -37,5 +37,8 @@ export default {
 }
 .recommend-view-item img{
   width: 80%;
+}
+.title{
+  margin-top: 5px;
 }
 </style>

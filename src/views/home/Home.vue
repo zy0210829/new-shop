@@ -22,7 +22,7 @@
       <!--    特点-->
       <feature-view></feature-view>
       <!--    选项卡控件-->
-      <tab-control :title="['流行','新款','精选']" @tabControlClick="tabControlClick" ref="tabControl" clss="tab-control"></tab-control>
+      <tab-control :title="['流行','新款','精选']" @tabControlClick="tabControlClick" ref="tabControl" class="tab-control"></tab-control>
       <goods-list :goods="showGoods"></goods-list><!--   showGoods 根据点击获取类型-->
     </scroll>
 

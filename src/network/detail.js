@@ -39,7 +39,7 @@ export  class GoodsParam{//抽取详情页中尺码表的数据
     //注意：这里面的images可能没有值（某些商品有，某些商品没有）
     this.iamge = info.images ? info.images[0] :'';
     this.infos = info.set;
-    this.sizes = rule.tables;
+    this.sizes = rule.tables ? rule.tables : '';
   }
 
 }

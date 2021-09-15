@@ -13,8 +13,8 @@ export function request(config){
   //响应拦截
   instance.interceptors.response.use(res =>{
     return res.data//一般res里面data里面还有个data   这里返回的外面的data
-  },err =>{
-    console.log(err);
+  },error => {
+    console.log(error);
   })
 
   //发送网络请求

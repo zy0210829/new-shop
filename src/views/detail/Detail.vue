@@ -90,7 +90,10 @@ export default {
       this.detailInfo = data.detailInfo;
 
       //5.商品的尺码表
-      this.paramInfo = new GoodsParam(data.itemParams.info,data.itemParams.rule)
+      if((data.itemParams.info && data.itemParams.rule) !==0){
+        this.paramInfo = new GoodsParam(data.itemParams.info,data.itemParams.rule)
+      }
+
 
       //6.评论信息
       if(data.rate.cRate !== 0){
@@ -184,7 +187,13 @@ export default {
       product.iid = this.iid;
 
       //2.将商品添加到购物车里面
-      this.$store.dispatch('addCart',product)
+      this.$store.dispatch('addCart',product).then(res =>{
+       // 当第一次加入商品的时候，调用toast组件的show方法
+        this.$toast.show(res,1000)
+      }).catch(err => {
+        //当不是第一次加入商品的时候
+        this.$toast.show(err,1000)
+      })
     }
   }
 }

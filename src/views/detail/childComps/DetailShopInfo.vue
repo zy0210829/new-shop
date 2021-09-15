@@ -78,9 +78,10 @@ export default {
 <style lang="less" scoped>
 /*整个盒子*/
 .shop-info{
-  padding: 0.64rem 0.34rem;
-  border-bottom: 0.128rem solid rgba(128, 128, 128, 0.2);
-  font-size: 0.75rem;
+
+  padding: 10px 5px;
+  border-bottom: 4px solid rgba(128, 128, 128, 0.2);
+  font-size: 12px;
 }
 /*店铺顶部样式*/
 .shop-top{
@@ -95,7 +96,8 @@ export default {
   }
   span{
     font-family: "微软雅黑",serif;
-    font-size: 0.768rem;
+    font-size: 16px;
+    font-weight: 700;
   }
 }
 /**

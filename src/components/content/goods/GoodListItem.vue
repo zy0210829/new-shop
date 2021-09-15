@@ -1,6 +1,6 @@
 <template>
   <div class="goods-item" >
-    <img :src="showImg" alt="" @load="imgLoad" @click="itemClick"><!--@load  监听图片加载完成-->
+    <img v-lazy="showImg" alt="" @load="imgLoad" @click="itemClick"><!--@load  监听图片加载完成-->
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{'¥'+goodsItem.price}}</span>
@@ -24,7 +24,7 @@ export default {
     showImg(){
       //this.goodsItem.image  详情页推荐的图片
       //this.goodsItem.show.img  home里面的'流行','新款','精选'的图片
-      return  this.goodsItem.image || this.goodsItem.show.img
+      return  this.goodsItem.image || this.goodsItem.img || this.goodsItem.show.img
     }
   },
   methods:{
