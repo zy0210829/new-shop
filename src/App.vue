@@ -18,7 +18,15 @@ export default {
 
   },
 
+
 }
+
+let id=document.getElementById('App')
+window.addEventListener('resize',function (){
+  location.reload()
+})
+
+
 </script>
 
 <style>
